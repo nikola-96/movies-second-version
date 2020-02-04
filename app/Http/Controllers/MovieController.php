@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use  App\Http\Requests\MovieRequest;
 
 class MovieController extends Controller
 {
@@ -16,4 +17,11 @@ class MovieController extends Controller
         $movie = \App\Movie::getMovieById($id);
         return view('movies.singleMovie', compact(['movie']));
     }
+    public function create(){
+        return view('movies.create');
+    }
+public function store(MovieRequest $request){
+    $movie = \App\Movie::create($request->all());
+    return redirect()->action('MovieController@index');
+}
 }
