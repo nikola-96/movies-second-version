@@ -19,4 +19,7 @@ Route::get('/movies', 'MovieController@index');
 Route::get('/movies/{id}', 'MovieController@show');
 Route::get('/create', 'MovieController@create');
 Route::post('/create', 'MovieController@store');
+Route::post('/comment/add/{id}', 'CommentController@store');
+Route::get('/genres/{genre}', 'GenresController@show');
+
 

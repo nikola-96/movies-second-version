@@ -8,9 +8,10 @@ use  App\Http\Requests\MovieRequest;
 class MovieController extends Controller
 {
     public function index(){
+    $lastFive = $this->latestMovies;
     $movies = \App\Movie::all();
 
-    return view('movies.movies', compact(['movies']));
+    return view('movies.movies', compact(['movies', 'lastFive']));
     }
  
     public function show($id){
