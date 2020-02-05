@@ -8,5 +8,4 @@
         </div>
             <button type="submit" class="btn btn-secondary">Add Comment</button>
         @csrf
-
 </form>

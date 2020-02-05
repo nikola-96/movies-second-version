@@ -25,4 +25,11 @@ public function store(MovieRequest $request){
     $movie = \App\Movie::create($request->all());
     return redirect()->action('MovieController@index');
 }
+public function storeCheck($id){
+
+    $box = \App\Movie::find($id);
+    $box->watched = request('watched');
+    $box->save();
+    return redirect()->action('MovieController@index');
+}
 }

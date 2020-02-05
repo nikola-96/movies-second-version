@@ -1,5 +1,4 @@
 
-
 <div class="sidebar-module">
     <h4>Last five movies</h4>
     <ol class="list-unstyled">
